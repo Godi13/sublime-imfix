@@ -4,7 +4,7 @@
 0. 下载sublime-imfix.c  
 假设下载到了 home（～）目录下
 
-0. 安装c\C++编译环境和gtk libgtk2.0-dev  
+0. 安装C\C++编译环境和gtk libgtk2.0-dev  
 终端下输入以下命令：  
 	`sudo apt-get install build-essential  libgtk2.0-dev`
 
@@ -21,12 +21,18 @@
 	> + 该命令需要在 home 目录下执行， 即 **libsublime-imfix.so** 所在目录
 	> + **$SUBLIME_HOME**，指Sublime的安装（所在）目录
 
-0. 启动 Sublime Text 2  
+0. 启动 Sublime Text 3  
 终端下输入以下命令：  
 	`LD_PRELOAD=./libsublime-imfix.so ./sublime_text`
 
 	>  该命令需要在 sublime 的安装目录下执行  
 	> 否则，需要将命令中的两个文件换成绝对路径
+	
+0. 修改 .bashrc   
+为了方便，可以在 **.bashrc** 中添加如下语句，这样在终端输入 *__subl__* 即可打开sublime并输入中文   
+	`alias subl='LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so /opt/sublime_text/sublime_text'`
+
+	> ' '引号内需要输入绝对路径,如果安装位置不一样，请查看自己sublime安装位置并替换 
 
 #### 博客：http://my.oschina.net/zlLeaf/blog/185428
 #### 来源：http://my.oschina.net/wugaoxing/blog/121281
