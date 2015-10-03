@@ -40,7 +40,7 @@
 
 	修改该文件需要权限`sudo vim sublime_text.desktop`  
 
-	将 **sublime_text.desktop** 文件中 *[Desktop Entry]* 下的 *Exec* 修改如下，然后`shfit+z+z`保存即可:  
+	将 **sublime_text.desktop** 文件中 *[Desktop Entry]* 下的 *Exec* 修改如下，然后<kbd>shfit</kbd>+<kbd>z</kbd>+<kbd>z</kbd>保存即可:  
 	`Exec=bash -c ‘LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so /opt/sublime_text/sublime_text’`
 
 	> ' '引号内需要输入绝对路径,如果安装位置不一样，请查看自己sublime安装位置并替换
