@@ -12,7 +12,9 @@
 终端下输入以下命令：  
 	``gcc -shared -o libsublime-imfix.so sublime_imfix.c  `pkg-config --libs --cflags gtk+-2.0` -fPIC``
 
-	> 该命令需要在 home 目录下执行， 即 **sublime-imfix.c** 所在目录
+	> 该命令需要在 home 目录下执行， 即 **sublime-imfix.c** 所在目录  
+	
+	如果报错 `gcc: error: sublime_imfix.c: No such file or directory`，可以先进入系统设置>语言支持，查看是否有未安装完的包，如果有将自动安装，完成后再执行命令。
 
 0. 将编译好的库移到 sublime 的安装目录  
 终端下输入以下命令：  
@@ -36,7 +38,7 @@
 
 0. 从任务栏启动  
 在ubuntu系统下，将sublime锁定到左侧任务栏，会有一个**sublime_text.desktop**，目录：  
-`~/usr/share/applications` （位置可能不同，自行`locate sublime_text.desktop`确认）
+`/usr/share/applications` （位置可能不同，自行`locate sublime_text.desktop`确认）
 
 	修改该文件需要权限`sudo vim sublime_text.desktop`  
 
